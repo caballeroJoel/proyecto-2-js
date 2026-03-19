@@ -1,4 +1,4 @@
-import { destinacionsDestacades, ofertes } from "./data.js";
+import { destinacionsDestacades, ofertes, hotelsPopulars } from "./data.js";
 
 const cls = {
 

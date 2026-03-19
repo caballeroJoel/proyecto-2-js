@@ -48,3 +48,31 @@ export const ofertes = [
     imatgeUrl: "covid",
   },
 ];
+
+
+export const hotelsPopulars = [
+  {
+    id: "lakeside-motel-warefront",
+    nom: "Lakeside Motel Warefront",
+    imatgeUrl: "/images/hotels/lakeside-motel.jpg",
+    propietatsCount: 2246,
+  },
+  {
+    id: "rocce-graham-resort",
+    nom: "Rocce Graham resort",
+    imatgeUrl: "/images/hotels/rocce-graham.jpg",
+    propietatsCount: 1278,
+  },
+  {
+    id: "fireside-dinners",
+    nom: "Fireside Dinners",
+    imatgeUrl: "/images/hotels/fireside-dinners.jpg",
+    propietatsCount: 480,
+  },
+  {
+    id: "oculous-inn-stay",
+    nom: "Oculous Inn Stay",
+    imatgeUrl: "/images/hotels/oculous-inn.jpg",
+    propietatsCount: 320,
+  },
+];
