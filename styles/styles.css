@@ -1,0 +1,12 @@
+@import "color.css";
+@import "general.css";
+
+* {
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+
+    font-family: 'SF Pro Display', sans-serif;
+                                                
+}

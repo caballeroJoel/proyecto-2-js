@@ -1,0 +1,30 @@
+:root {
+    --col-bl: #2F80ED;
+    --col-bl-2: #4796FF;
+    --col-bl-3: #2366BF;
+
+
+    --col-gn: #219653;
+    --col-rd: #EB5757;
+    --col-or: #F2994A;
+    --col-or-2: #FFD723;
+    --col-ye: #FCEFCA;
+    --col-ye-2: #F2C94C;
+    --col-wh-1: #FFFFFF;
+    --col-wh-2: #F4F4F4;
+
+    --col-blk-3: #333333;
+
+    --col-gr-1: #F2F2F2;
+    --col-gr-2: #4F4F4F;
+    --col-gr-3: #BDBDBD;
+    --col-gr-4: #E0E0E0;
+    --col-gr-5: #828282;
+    --col-gr-6: #D6D6D6;
+
+    --col-logo: #1B1F2D;
+    --col-titulos: #181818;
+    --col-facebook: #475993;
+
+    --col-check-inbox: #FEE2654D;
+}

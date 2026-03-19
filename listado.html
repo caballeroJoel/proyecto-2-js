@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+        <title>Search Results</title>
+    </head>
+    <body>
+        <main class="search-results">
+            <header>
+                <div>
+                    <div class="logo">
+                        <img src="../img/avion_wh.png" alt="">
+                        <p>my Dream Place</p>
+                    </div>
+                    <div class="menu">
+                        <a href="index.html">Home</a>
+                        <a href="">Discover</a>
+                        <a href="">Activities</a>
+                        <a href="">About</a>
+                        <a href="">Contact</a>
+                    </div>
+                    <div class="user">
+                        <!-- <a href="register_email.html"><button class="regis">Register</button></a>
+                        <a href="login.html"><button class="login">Sign in</button></a> -->
+    
+                        <img src="../img/campana.png" alt="">
+                        <div class="profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-search">
+                <div class="search-box">
+                    <div>
+                        <img src="img/ubicaciones.png" alt="">
+                        <input type="text" placeholder="Where are you going?" class="where">
+                        <img src="img/calendario.png" alt="">
+                        <input type="text" placeholder="Check in date" class="when">
+                        <img src="img/calendario.png" alt="">
+                        <input type="text" placeholder="Check out date" class="when">
+                        <img src="img/avatar.png" alt="">
+                        <input type="text" placeholder="Guests" class="who">
+                        <button>Search</button>
+                    </div>
+                </div>
+
+                <div class="espaciado"></div>
+
+                <div class="content-search">
+                    <div class="filters">
+                        <div class="filtro search-by-name">
+                            <p>Search by property name</p>
+                            <div>
+                                <img src="./img/lupa.svg" alt="">
+                                <input type="text" placeholder="eg. Beach westpalm">
+                            </div>
+                        </div>
+
+                        <span class="title-filter">Filter by</span>
+
+                        <div class="filter-budget filtros">
+                            <div class="title-filters">
+                                <p>Your budget per day</p>
+                            </div>
+                            <div class="budget-content filtros">
+                                <div class="inputs-spans">
+                                    <input type="checkbox" name="price" id="0-200">
+                                    <span>$ 0 - $ 200</span>
+                                    <input type="checkbox" name="price" id="200-500">
+                                    <span>$ 200 - $ 500</span>
+                                    <input type="checkbox" name="price" id="500-1000">
+                                    <span>$ 500 - $ 1,000</span>
+                                    <input type="checkbox" name="price" id="1000-2000">
+                                    <span>$ 1,000 - $ 2,000</span>
+                                    <input type="checkbox" name="price" id="2000-5000">
+                                    <span>$ 2,000 - $ 5,000</span>
+                                </div>
+                                <div class="cant-spans">
+                                    <span>200</span>
+                                    <span>100</span>
+                                    <span>15</span>
+                                    <span>12</span>
+                                    <span>230</span>
+                                </div>
+                            </div>
+
+                            <div class="custom-budget">
+                                <span>Set your own budget</span>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+
+                        <div class="filter-rating">
+                            <div class="title-filters">
+                                <p>Rating</p>
+                            </div>
+
+                            <div class="box-stars">
+                                <p>Show only ratings more than</p>
+                                <div class="stars">
+                                    <button>
+                                        <span>1</span>
+                                        <img src="./img/star.png" alt="">
+                                    </button>
+                                    <button>
+                                        <span>2</span>
+                                        <img src="./img/star.png" alt="">
+                                    </button>
+                                    <button>
+                                        <span>3</span>
+                                        <img src="./img/star.png" alt="">
+                                    </button>
+                                    <button>
+                                        <span>4</span>
+                                        <img src="./img/star.png" alt="">
+                                    </button>
+                                    <button>
+                                        <span>5</span>
+                                        <img src="./img/star.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-popular filtros">
+                            <div class="title-filters">
+                                <p>Activities</p>
+                            </div>
+                            <div class="budget-content">
+                                <div class="inputs-spans">
+                                    <input type="checkbox" name="activities" id="fishing">
+                                    <span>Fishing</span>
+                                    <input type="checkbox" name="activities" id="hiking">
+                                    <span>Hiking</span>
+                                    <input type="checkbox" name="activities" id="beach">
+                                    <span>Beach</span>
+                                    <input type="checkbox" name="activities" id="cycling">
+                                    <span>Cycling</span>
+                                    <input type="checkbox" name="activities" id="sauna">
+                                    <span>Sauna</span>
+                                    <input type="checkbox" name="activities" id="night-lights">
+                                    <span>Night lights</span>
+                                </div>
+                                <div class="cant-spans">
+                                    <span>200</span>
+                                    <span>100</span>
+                                    <span>15</span>
+                                    <span>12</span>
+                                    <span>230</span>
+                                    <span>12</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-activitis filtros">
+                            <div class="title-filters">
+                                <p>Popular Filters</p>
+                            </div>
+                            <div class="budget-content">
+                                <div class="inputs-spans">
+                                    <input type="checkbox" name="popular" id="free-cancleation">
+                                    <span>Free cancellation</span>
+                                    <input type="checkbox" name="popular" id="spa">
+                                    <span>Spa</span>
+                                    <input type="checkbox" name="popular" id="beach-front">
+                                    <span>Beach front</span>
+                                    <input type="checkbox" name="popular" id="jacuzzi">
+                                    <span>Hot tub/ jacuzzi</span>
+                                    <input type="checkbox" name="popular" id="book">
+                                    <span>Book without credit card</span>
+                                    <input type="checkbox" name="popular" id="no-prepayment">
+                                    <span>No prepayment</span>
+                                </div>
+                                <div class="cant-spans">
+                                    <span>200</span>
+                                    <span>100</span>
+                                    <span>15</span>
+                                    <span>12</span>
+                                    <span>230</span>
+                                    <span>12</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="searches">
+                        <h1>Melbourne : 2,582 search results found</h1>
+                        <div class="orders">
+                            <div class="types">
+                                <button class="selected">Our top picks</button>
+                                <button>Hotel and apartments</button>
+                                <button>Residence</button>
+                                <button>Resort</button>
+                                <button>Shared Space</button>
+                            </div>
+                            <div class="sort-by">
+                                <span>Sort by:</span>
+                                <select name="sort" id="sort">
+                                    <option value="recomendados">Recommended</option>
+                                    <option value="precio-asc">Precio: Bajo a Alto</option>
+                                    <option value="precio-desc">Precio: Alto a Bajo</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+
+                        <div class="content">
+                            <div class="container">
+                                <div>
+                                    <img src="./img/searches/comedor.png" alt="">
+                                </div>
+                                <div class="desc">
+                                    <div class="carac">
+                                        <h2>Lakeside Motel Warefront</h2>
+                                        <div class="stars-rating">
+                                            <div>
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                            </div>
+                                            <p>4.5 (1200 Reviews)</p>
+                                        </div>
+                                        <p>Live a little and celbrate with champagne</p>
+                                        <span>Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</span>
+                                        <button>See availability</button>
+                                    </div>
+                                    <div class="price">
+                                        <div class="prom">
+                                            <p class="r">Book now and receive 15% off</p>
+                                        </div>
+                                        <div>
+                                            <span class="off">5% off</span>
+                                            <p class="rooms">1 room 2 days</p>
+                                            <div class="doll">
+                                                <p class="marc">$150</p>
+                                                <p>$130</p>
+                                            </div>
+                                            <p>Includes taxes and fees</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <div>
+                                    <img src="./img/searches/parasol-patio.png" alt="">
+                                </div>
+                                <div class="desc">
+                                    <div class="carac">
+                                        <h2>Lakeside Motel Warefront</h2>
+                                        <div class="stars-rating">
+                                            <div>
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                            </div>
+                                            <p>4.5 (1200 Reviews)</p>
+                                        </div>
+                                        <p>Live a little and celbrate with champagne</p>
+                                        <span>Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</span>
+                                        <button>See availability</button>
+                                    </div>
+                                    <div class="price">
+                                        <div class="prom">
+                                            
+                                        </div>
+                                        <div>
+                                            
+                                            <p class="rooms">1 room 2 days</p>
+                                            <div class="doll">
+                                                <p>$240</p>
+                                            </div>
+                                            <p>Includes taxes and fees</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <div>
+                                    <img src="./img/searches/comedor.png" alt="">
+                                </div>
+                                <div class="desc">
+                                    <div class="carac">
+                                        <h2>Lakeside Motel Warefront</h2>
+                                        <div class="stars-rating">
+                                            <div>
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                            </div>
+                                            <p>4.5 (1200 Reviews)</p>
+                                        </div>
+                                        <p>Live a little and celbrate with champagne</p>
+                                        <span>Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</span>
+                                        <button>See availability</button>
+                                    </div>
+                                    <div class="price">
+                                        <div class="prom">
+                                            <p class="o">Receive 30% discount on a restaurant</p>
+                                        </div>
+                                        <div>
+                                            <p class="rooms">1 room 2 days</p>
+                                            <div class="doll">
+                                                <p class="marc">$150</p>
+                                                <p>$130</p>
+                                            </div>
+                                            <p>Includes taxes and fees</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <div>
+                                    <img src="./img/searches/comedor.png" alt="">
+                                </div>
+                                <div class="desc">
+                                    <div class="carac">
+                                        <h2>Lakeside Motel Warefront</h2>
+                                        <div class="stars-rating">
+                                            <div>
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                            </div>
+                                            <p>4.5 (1200 Reviews)</p>
+                                        </div>
+                                        <p>Live a little and celbrate with champagne</p>
+                                        <span>Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</span>
+                                        <button>See availability</button>
+                                    </div>
+                                    <div class="price">
+                                        <div class="prom">
+                                            <p class="r">Book now and receive 15% off</p>
+                                        </div>
+                                        <div>
+                                            <span class="off">5% off</span>
+                                            <p class="rooms">1 room 2 days</p>
+                                            <div class="doll">
+                                                <p class="marc">$150</p>
+                                                <p>$130</p>
+                                            </div>
+                                            <p>Includes taxes and fees</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <div>
+                                    <img src="./img/searches/comedor.png" alt="">
+                                </div>
+                                <div class="desc">
+                                    <div class="carac">
+                                        <h2>Lakeside Motel Warefront</h2>
+                                        <div class="stars-rating">
+                                            <div>
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                            </div>
+                                            <p>4.5 (1200 Reviews)</p>
+                                        </div>
+                                        <p>Live a little and celbrate with champagne</p>
+                                        <span>Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</span>
+                                        <button>See availability</button>
+                                    </div>
+                                    <div class="price">
+                                        <div class="prom">
+                                            <p class="r">Book now and receive 15% off</p>
+                                        </div>
+                                        <div>
+                                            <span class="off">5% off</span>
+                                            <p class="rooms">1 room 2 days</p>
+                                            <div class="doll">
+                                                <p class="marc">$150</p>
+                                                <p>$130</p>
+                                            </div>
+                                            <p>Includes taxes and fees</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <div>
+                                    <img src="./img/searches/comedor.png" alt="">
+                                </div>
+                                <div class="desc">
+                                    <div class="carac">
+                                        <h2>Lakeside Motel Warefront</h2>
+                                        <div class="stars-rating">
+                                            <div>
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                                <img src="./img/star.png" alt="">
+                                            </div>
+                                            <p>4.5 (1200 Reviews)</p>
+                                        </div>
+                                        <p>Live a little and celbrate with champagne</p>
+                                        <span>Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</span>
+                                        <button>See availability</button>
+                                    </div>
+                                    <div class="price">
+                                        <div class="prom">
+                                            <p class="r">Book now and receive 15% off</p>
+                                        </div>
+                                        <div>
+                                            <span class="off">5% off</span>
+                                            <p class="rooms">1 room 2 days</p>
+                                            <div class="doll">
+                                                <p class="marc">$150</p>
+                                                <p>$130</p>
+                                            </div>
+                                            <p>Includes taxes and fees</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="info-covid">
+                <img src="../img/danger.png" alt="">
+                <p>Check the latest COVID-19 restrictions before you travel. <a href="">Learn more</a></p>
+            </div>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="logo-footer">
+                        <div>
+                            <img src="../img/avion.png" alt="">
+                            <p>my Dream Place</p>
+                        </div>
+                        <span>Your next goto companion for travel</span>
+                    </div>
+                    <div>
+                        <p>Company</p>
+                        <span><a href="">About</a></span>
+                        <span><a href="">Jobs</a></span>
+                        <span><a href="">Newsroom</a></span>
+                        <span><a href="">Advertising</a></span>
+                        <span><a href="">Contact us</a></span>
+                    </div>
+                    <div>
+                        <p>Explore</p>
+                        <span><a href="">Australia</a></span>
+                        <span><a href="">New Zealand</a></span>
+                        <span><a href="">United State America (USA)</a></span>
+                        <span><a href="">Greece</a></span>
+                        <span><a href="">Maldivas</a></span>
+                        <span><a href="">Singapore</a></span>
+                        <span class="bl"><a href="">See more</a></span>
+                    </div>
+                    <div>
+                        <p>Terms and Policies</p>
+                        <span><a href="">Privacy Policy</a></span>
+                        <span><a href="">Terms of use</a></span>
+                        <span><a href="">Acessibility</a></span>
+                        <span><a href="">Reward system policy</a></span>
+                    </div>
+                    <div>
+                        <p>Help</p>
+                        <span><a href="">Support</a></span>
+                        <span><a href="">Cancel your bookings</a></span>
+                        <span><a href="">Use Coupon</a></span>
+                        <span><a href="">Refund Policies</a></span>
+                        <span><a href="">International Travel Documents</a></span>
+                    </div>
+                </div>
+            </footer>
+            <div class="footer-bottom">
+                <p>© My Dream Place 2022</p>
+            </div>
+        </main>
+    </body>
+</html>
