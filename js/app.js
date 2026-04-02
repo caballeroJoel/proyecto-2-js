@@ -1,4 +1,4 @@
-import { destinacionsDestacades, ofertes, hotelsPopulars, searchResultsData, productDetailData } from "./data.js";
+import { destinacionsDestacades, ofertes, hotelsPopulars, searchResultsData, productDetailData, checkoutData } from "./data.js";
 
 const cls = {
 
@@ -23,6 +23,10 @@ const cls = {
     overviewProduct: document.querySelector("#overviewProduct"),
     areaProduct: document.querySelector("#areaProduct"),
     roomsAva: document.querySelector("#roomsAva"),
+
+    titleRoom: document.querySelector("#titleRoom"),
+    resumenReser: document.querySelector("#resumenReser"),
+    infoImportant: document.querySelector("#infoImportant"),
     
 }
 
@@ -42,6 +46,14 @@ function render() {
     }
     if(ruta == "/product.html") {
         productDetail();
+    }
+    if(ruta == "/product.html") {
+        productDetail();
+    }
+    if(ruta == "/reservation.html") {
+        room();
+        reservation();
+        importantInfo();
     }
 
 }
@@ -210,7 +222,7 @@ function searchResult() {
 
 }
 
-/****************** Search ******************/
+/***************** Prodcut *****************/
 function productDetail() {
     let htmlImg = '', htmlName='', hmtlOverview='', htmlFacilities = '';
     let htmlArea = '', htmlRooms = '';
@@ -372,8 +384,119 @@ function productDetail() {
 
 }
 
+/****************** Reserv ******************/
+function room() {
+
+    let html = `
+        <img src="./img/icons_prod/person_shield.png" alt="">
+        <h2>${checkoutData.room.roomLabel}</h2>
+        <span>${checkoutData.room.summary}</span>
+    `;
 
 
+    cls.titleRoom.innerHTML = html;
+}
+function reservation() {
+    let html = '', html2 = '';
 
+    checkoutData.priceDetails.items.forEach(item => {
+        html2 += `
+            <div>
+                <span>$ ${item.description}</span>
+                <span>$ ${item.amount}</span>
+            </div>
+        `;
+    });
+
+    html = `
+        <div class="resumen">
+            <div class="img">
+                <img src="./img/products/${checkoutData.summaryCard.hotelId}_2.png" alt="">
+            </div>
+            <div class="resm">
+                <div>
+                    <p>${checkoutData.summaryCard.hotelName}</p>
+                    <div class="stars-rating">
+                        <div>
+                            <img src="./img/star.png" alt="">
+                            <img src="./img/star.png" alt="">
+                            <img src="./img/star.png" alt="">
+                            <img src="./img/star.png" alt="">
+                            <img src="./img/star.png" alt="">
+                        </div>
+                        <p>${checkoutData.summaryCard.rating} (${checkoutData.summaryCard.reviewCount} Reviews)</p>
+                    </div>
+                </div>
+                <div class="prop">
+                    <span class="marc">${checkoutData.summaryCard.policy}</span>
+                    <span>Check in: ${checkoutData.summaryCard.checkIn}</span>
+                    <span>Check out: ${checkoutData.summaryCard.checkOut}</span>
+                    <span>${checkoutData.summaryCard.stayNights} night stay</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="price_det">
+            <div class="tit">
+                <p>Price Detail</p>
+            </div>
+            <div class="details">
+                <div class="prices">
+                    ${html2}
+                </div>
+                <hr>
+                <div class="total">
+                    <div class="precio_total">
+                        <p>Total</p>
+                        <p class="precio">${checkoutData.priceDetails.currency}${checkoutData.priceDetails.total}</p>
+                    </div>
+                    <span>Use a coupon, credit or promotional code</span>
+
+                    <div class="coupon">
+                        <span>Coupon code</span>
+                        <div>
+                            <input type="text" name="coupon" id="coupon">
+                            <input type="submit" value="Apply Coupon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    cls.resumenReser.innerHTML = html;
+
+}
+function importantInfo() {
+
+    let html2 = '';
+
+    checkoutData.policyItems.forEach(item => {
+        html2+= `
+            <li>${item}</li>
+        `;
+    });
+
+    let html = `
+        <div class="title">
+            <img src="./img/icons_prod/lock.png" alt="">
+            <h2>Important information</h2>
+        </div>
+        <div class="cont">
+            <ol>
+                ${html2}
+            </ol>
+            <br>
+            <span>By clicking the button below, I acknowledge that I have reviewed the <a href="">Privacy Statement</a> and have reviewd and accept the <a href="">Rules and Restrictions</a> and <a href="">Terms of Use.</a></span>
+            <button>Complete Booking</button>
+            <div>
+                <img src="./img/icons_prod/green_lock.png" alt="">
+                <span>We use secure transmission and encrypted storage to protect your personal information</span>
+            </div>
+        </div>
+    `;
+
+    cls.infoImportant.innerHTML = html;
+}
 
 render();

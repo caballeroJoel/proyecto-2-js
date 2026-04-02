@@ -2929,15 +2929,16 @@ body {
                         background-color: var(--col-wh-1);
                         border-radius: 6px;
                         
-                        div.img {
-                            width: 400px;
-                            height: 180px;
-                            
-                            background-image: url(./../img/products/entrada_casa.png);
-                            background-size: cover;
-                            background-position: center;
-
-                            border-radius: 6px 6px 0px 0px;
+                        div {
+                            img {
+                                width: 400px;
+                                height: 180px;
+                                
+                                object-fit: cover;
+                                object-position: center;
+    
+                                border-radius: 6px 6px 0px 0px;
+                            }
                         }
 
                         .resm {

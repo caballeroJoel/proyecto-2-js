@@ -37,11 +37,7 @@
                     <div class="content">
                         <div class="forms">
                             <div class="options room">
-                                <div class="title">
-                                    <img src="./img/icons_prod/person_shield.png" alt="">
-                                    <h2>Room 1</h2>
-                                    <span>2 adults, 1 double bed and 1 twin bed, Non-smoking</span>
-                                </div>
+                                <div class="title" id="titleRoom"></div>
                                 <div class="cont">
                                     <div class="names">
                                         <div>
@@ -164,7 +160,7 @@
                                 </div>
                             </div>
 
-                            <div class="options info">
+                            <div class="options info" id="infoImportant">
                                 <div class="title">
                                     <img src="./img/icons_prod/lock.png" alt="">
                                     <h2>Important information</h2>
@@ -187,69 +183,11 @@
                             </div>
                         </div>
 
-                        <div>
-                            <div class="resumen">
-                                <div class="img"></div>
-                                <div class="resm">
-                                    <div>
-                                        <p>Lakeside Motel Warefront</p>
-                                        <div class="stars-rating">
-                                            <div>
-                                                <img src="./img/star.png" alt="">
-                                                <img src="./img/star.png" alt="">
-                                                <img src="./img/star.png" alt="">
-                                                <img src="./img/star.png" alt="">
-                                                <img src="./img/star.png" alt="">
-                                            </div>
-                                            <p>4.5 (1200 Reviews)</p>
-                                        </div>
-                                    </div>
-                                    <div class="prop">
-                                        <span class="marc">Non refundable</span>
-                                        <span>Check in: Sunday, March 18, 2022</span>
-                                        <span>Check out: Tuesday, March 20, 2022</span>
-                                        <span>2 night stay</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="price_det">
-                                <div class="tit">
-                                    <p>Price Detail</p>
-                                </div>
-                                <div class="details">
-                                    <div class="prices">
-                                        <div>
-                                            <span>1 room X 2 nights</span>
-                                            <span>$ 120.32</span>
-                                        </div>
-                                        <div>
-                                            <span>Tax and service fees</span>
-                                            <span>$ 8.32</span>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="total">
-                                        <div class="precio_total">
-                                            <p>Total</p>
-                                            <p class="precio">$130</p>
-                                        </div>
-                                        <span>Use a coupon, credit or promotional code</span>
-
-                                        <div class="coupon">
-                                            <span>Coupon code</span>
-                                            <div>
-                                                <input type="text" name="coupon" id="coupon">
-                                                <input type="submit" value="Apply Coupon">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div id="resumenReser"></div>
                     </div>
                 </div>
             </div>
         </main>
+        <script type="module" src="./js/app.js"></script>
     </body>
 </html>
