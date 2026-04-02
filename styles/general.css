@@ -2075,102 +2075,102 @@ body {
                             }
                         }
 
-                        .info-covid {
-                            height: 32px;
+                    }
+                    .info-covid {
+                        height: 32px;
 
-                            margin: 128px 0px 32px 0px;
-                            padding: 20px;
+                        margin: 128px 0px 32px 0px;
+                        padding: 20px;
 
-                            border-radius: 1rem;
+                        border-radius: 1rem;
 
-                            background-color: var(--col-ye);
-                            color: var(--col-blk-3);
+                        background-color: var(--col-ye);
+                        color: var(--col-blk-3);
 
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            width: 32px;
+                            margin: 0px 1rem 0px 1rem;
+                        }
+
+                        p {
+                            width: 476px;
+                            height: 22px;
+                            
+                            font-size: 16px;
+
+                            a {
+                                color: rgb(0, 89, 255);
+                            }
+                        }
+
+                    }
+
+                    footer {
+                        .footer-container {
                             display: flex;
-                            align-items: center;
+                            justify-content: space-between;
 
-                            img {
-                                width: 32px;
-                                margin: 0px 1rem 0px 1rem;
-                            }
+                            div {
+                                width: 225px;
 
-                            p {
-                                width: 476px;
-                                height: 22px;
-                                
-                                font-size: 16px;
+                                padding: 0px 20px;
 
-                                a {
-                                    color: rgb(0, 89, 255);
-                                }
-                            }
-
-                        }
-
-                        footer {
-                            .footer-container {
                                 display: flex;
-                                justify-content: space-between;
+                                flex-direction: column;
 
-                                div {
-                                    width: 225px;
+                                &.logo-footer {
 
-                                    padding: 0px 20px;
-
-                                    display: flex;
-                                    flex-direction: column;
-
-                                    &.logo-footer {
-
-                                        > div {
-                                            display: flex;
-                                            flex-direction: row;
-                    
-                                            img {
-                                                width: 24px;
-                                                height: 24px;
-                                                margin: 0px 8px 0px 0px;
-                                            }
-                                            p {
-                                                font-size: 18px;
-                                                color: var(--col-logo);
-                                            }
+                                    > div {
+                                        display: flex;
+                                        flex-direction: row;
+                
+                                        img {
+                                            width: 24px;
+                                            height: 24px;
+                                            margin: 0px 8px 0px 0px;
                                         }
-                                        span {
-                                            padding-left: 32px;
-                                            color: var(--col-gr-2);
-                                            font-size: 14px;
+                                        p {
+                                            font-size: 18px;
+                                            color: var(--col-logo);
                                         }
                                     }
-
-                                    p {
-                                        font-size: 16px;
-                                        font-weight: 500;
-                                        padding-bottom: 1rem;
-                                    }
-
-                                    span, span a {
-                                        padding: .5rem 0rem;
-                                        font-size: 14px;
-                                        font-weight: 400;
+                                    span {
+                                        padding-left: 32px;
                                         color: var(--col-gr-2);
+                                        font-size: 14px;
                                     }
+                                }
 
-                                    .bl a{
-                                        color: var(--col-bl) !important;
-                                    }
+                                p {
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    padding-bottom: 1rem;
+                                }
+
+                                span, span a {
+                                    padding: .5rem 0rem;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: var(--col-gr-2);
+                                }
+
+                                .bl a{
+                                    color: var(--col-bl) !important;
                                 }
                             }
                         }
+                    }
 
-                        .footer-bottom {
-                            margin: 2rem -100px 0rem -100px;
-                            padding: 1rem;
-                            text-align: center;
-                            background-color: var(--col-gr-1);
-                            color: var(--col-gr-2);
-                            font-size: 14px;
-                        }
+                    .footer-bottom {
+                        margin: 2rem -100px 0rem -100px;
+                        padding: 1rem;
+                        text-align: center;
+                        background-color: var(--col-gr-1);
+                        color: var(--col-gr-2);
+                        font-size: 14px;
                     }
                 }
             }

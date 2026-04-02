@@ -32,23 +32,7 @@
             </header>
 
             <div class="main-product">
-                <div class="img-products">
-                    <div>
-                        <div>
-                            <img src="./img/products/comedor.png" alt="">
-                        </div>
-    
-                        <div>
-                            <div>
-                                <img src="./img/products/entrada_casa.png" alt="">
-                            </div>
-                            
-                            <div>
-                                <img src="/img/products/patio.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="img-products" id="imgProducts"></div>
 
                 <div class="mini-menu">
                     <div>
@@ -62,252 +46,72 @@
                     <div>
                         <div class="carac">
                             <div>
-                                <div class="name-prod">
-                                    <h1>Lakeside Motel Warefront</h1>
-                                    <div class="stars-rating">
-                                        <div>
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                        </div>
-                                        <p>4.5 (1200 Reviews)</p>
-                                    </div>
-                                    <div class="loc">
-                                        <img src="./img/ubicaciones.png" alt="">
-                                        <p>Lorem ipsum road, Tantruim-2322, Melbourne, Australia</p>
-                                    </div>
-                                </div>
-                                <div class="overview">
-                                    <p>Overview</p>
-                                    <div class="overview-span">
-                                        <span>Featuring free WiFi throughout the property, Lakeside Motel Waterfront offers accommodations in Lakes Entrance, 19 mi from Bairnsdale. Free private parking is available on site.<br><br>
-                                        Each room at this motel is air conditioned and comes with a flat-screen TV. You will find a kettle, toaster and a microwave in the room. Each room is fitted with a private bathroom. Guests have access to barbecue facilities and a lovely large lawn area. Metung is 6.8 mi from Lakeside Motel Waterfront, while Paynesville is 14 mi from the property.<br><br>
-                                        Couples in particular like the location - they rated it 9.2 for a two-person trip.</span>
-                                    </div>
-                                    <hr>
-                                    <p>Top facilities</p>
-                                    <div class="facitities">
-                                        <div>
-                                            <img src="./img/icons_prod/wifi.png" alt="">
-                                            <span>Free wifi</span>
-                                        </div>
-                                        <div>
-                                            <img src="./img/icons_prod/security.png" alt="">
-                                            <span>Business Services</span>
-                                        </div>
-                                        <div>
-                                            <img src="./img/icons_prod/air.png" alt="">
-                                            <span>Air Conditioning</span>
-                                        </div>
-                                        <div>
-                                            <img src="./img/icons_prod/pool.png" alt="">
-                                            <span>Swimming pool</span>
-                                        </div>
-                                        <div>
-                                            <img src="./img/icons_prod/car.png" alt="">
-                                            <span>Parking available</span>
-                                        </div>
-                                        <div>
-                                            <img src="./img/icons_prod/top.png" alt="">
-                                            <span>Top rated in area</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="name-prod" id="nameProd"></div>
+
+                                <div class="overview" id="overviewProduct"></div>
                             </div>
 
-                            <div class="area">
-                                <img src="./img/products/map.png" alt="">
-                                <div>
-                                    <p>Explore the area</p>
-
-                                    <div class="explore">
-                                        <div>
-                                            <div>
-                                                <img src="./img/icons_prod/plane.png" alt="">
-                                                <span>Hotel Penselvenyia</span>
-                                            </div>
-                                            <div>
-                                                <span>2 min drive</span>
-                                            </div>
-                                        </div>
-                                        
-                                        <div>
-                                            <div>
-                                                <img src="./img/icons_prod/pin.png" alt="">
-                                                <span>Travis Bakery store house</span>
-                                            </div>
-                                            <div>
-                                                <span>10 min drive</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div>
-                                                <img src="./img/icons_prod/pin.png" alt="">
-                                                <span>Olivia Johnson Garden</span>
-                                            </div>
-                                            <div>
-                                                <span>15 min drive</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div>
-                                                <img src="./img/icons_prod/pin.png" alt="">
-                                                <span>Norman Opera Circus</span>
-                                            </div>
-                                            <div>
-                                                <span>18 min drive</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div>
-                                                <img src="./img/icons_prod/pin.png" alt="">
-                                                <span>Rockdeset hotel</span>
-                                            </div>
-                                            <div>
-                                                <span>32 min drive</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="area" id="areaProduct"></div>
                         </div>
 
-                        <div class="rooms">
-                            <h2>Available rooms</h2>
-                            <div class="reserva">
-                                <div>
-                                    <input type="text" placeholder="Mar 18, 2022">
-                                    <img src="./img/calendario.png" alt="">
-                                </div>
-                                <div>
-                                    <input type="text" placeholder="Mar 20, 2022">
-                                    <img src="./img/calendario.png" alt="">
-                                </div>
-                                <div>
-                                    <input type="text" placeholder="2 adult, 1 room">
-                                    <img src="./img/avatar.png" alt="">
-                                </div>
-                                <div>
-                                    <button>Check Availability</button>
-                                </div>
-                            </div>
+                        <div class="rooms" id="roomsAva"></div>
+                        
+                        <div class="info-covid">
+                            <img src="../img/danger.png" alt="">
+                            <p>Check the latest COVID-19 restrictions before you travel. <a href="">Learn more</a></p>
+                        </div>
 
-                            <div class="results">
-                                <div class="discount">
+                        <footer>
+                            <div class="footer-container">
+                                <div class="logo-footer">
                                     <div>
-                                        <div>
-                                            <img src="./img/avion_wh.png" alt="">
-                                            <span>my Dream Place</span>
-                                        </div>
-                                        <p>20% off<br>Use Promotional<br>Coupon Code:<br><span>Orlando</span></p>
+                                        <img src="../img/avion.png" alt="">
+                                        <p>my Dream Place</p>
                                     </div>
-                                    <div>
-                                        <img class="person" src="./img/products/person.png" alt="">
-                                    </div>
+                                    <span>Your next goto companion for travel</span>
                                 </div>
-                                <div class="dorm">
-                                    <img src="./img/products/dorm.png" alt="">
-                                    <div>
-                                        <h3>Standard twin ben, Multiple beds</h3>
-                                        <div>
-                                            <div>
-                                                <img src="./img/icons_prod/security_gr.png" alt="">
-                                                <span>300 sq ft</span>
-                                            </div>
-                                            <div>
-                                                <img src="./img/icons_prod/pool_gr.png" alt="">
-                                                <span>Sleeps 3</span>
-                                            </div>
-                                            <div>
-                                                <img src="./img/icons_prod/top_gr.png" alt="">
-                                                <span>1 double bed and 1 twin bed</span>
-                                            </div>
-                                        </div>
-                                        <button>Reserve suite</button>
-                                    </div>
+                                <div>
+                                    <p>Company</p>
+                                    <span><a href="">About</a></span>
+                                    <span><a href="">Jobs</a></span>
+                                    <span><a href="">Newsroom</a></span>
+                                    <span><a href="">Advertising</a></span>
+                                    <span><a href="">Contact us</a></span>
                                 </div>
-                                
-                                <div class="dorm">
-                                    <img src="./img/products/dorm_1.png" alt="">
-                                    <div>
-                                        <h3>Standard twin ben, 1 Queen bed</h3>
-                                        <div>
-                                            <div>
-                                                <img src="./img/icons_prod/security_gr.png" alt="">
-                                                <span>300 sq ft</span>
-                                            </div>
-                                            <div>
-                                                <img src="./img/icons_prod/pool_gr.png" alt="">
-                                                <span>Sleeps 3</span>
-                                            </div>
-                                            <div>
-                                                <img src="./img/icons_prod/top_gr.png" alt="">
-                                                <span>1 double bed and 1 twin bed</span>
-                                            </div>
-                                        </div>
-                                        <button>Reserve suite</button>
-                                    </div>
+                                <div>
+                                    <p>Explore</p>
+                                    <span><a href="">Australia</a></span>
+                                    <span><a href="">New Zealand</a></span>
+                                    <span><a href="">United State America (USA)</a></span>
+                                    <span><a href="">Greece</a></span>
+                                    <span><a href="">Maldivas</a></span>
+                                    <span><a href="">Singapore</a></span>
+                                    <span class="bl"><a href="">See more</a></span>
+                                </div>
+                                <div>
+                                    <p>Terms and Policies</p>
+                                    <span><a href="">Privacy Policy</a></span>
+                                    <span><a href="">Terms of use</a></span>
+                                    <span><a href="">Acessibility</a></span>
+                                    <span><a href="">Reward system policy</a></span>
+                                </div>
+                                <div>
+                                    <p>Help</p>
+                                    <span><a href="">Support</a></span>
+                                    <span><a href="">Cancel your bookings</a></span>
+                                    <span><a href="">Use Coupon</a></span>
+                                    <span><a href="">Refund Policies</a></span>
+                                    <span><a href="">International Travel Documents</a></span>
                                 </div>
                             </div>
-
-                            <div class="info-covid">
-                                <img src="../img/danger.png" alt="">
-                                <p>Check the latest COVID-19 restrictions before you travel. <a href="">Learn more</a></p>
-                            </div>
-
-                            <footer>
-                                <div class="footer-container">
-                                    <div class="logo-footer">
-                                        <div>
-                                            <img src="../img/avion.png" alt="">
-                                            <p>my Dream Place</p>
-                                        </div>
-                                        <span>Your next goto companion for travel</span>
-                                    </div>
-                                    <div>
-                                        <p>Company</p>
-                                        <span><a href="">About</a></span>
-                                        <span><a href="">Jobs</a></span>
-                                        <span><a href="">Newsroom</a></span>
-                                        <span><a href="">Advertising</a></span>
-                                        <span><a href="">Contact us</a></span>
-                                    </div>
-                                    <div>
-                                        <p>Explore</p>
-                                        <span><a href="">Australia</a></span>
-                                        <span><a href="">New Zealand</a></span>
-                                        <span><a href="">United State America (USA)</a></span>
-                                        <span><a href="">Greece</a></span>
-                                        <span><a href="">Maldivas</a></span>
-                                        <span><a href="">Singapore</a></span>
-                                        <span class="bl"><a href="">See more</a></span>
-                                    </div>
-                                    <div>
-                                        <p>Terms and Policies</p>
-                                        <span><a href="">Privacy Policy</a></span>
-                                        <span><a href="">Terms of use</a></span>
-                                        <span><a href="">Acessibility</a></span>
-                                        <span><a href="">Reward system policy</a></span>
-                                    </div>
-                                    <div>
-                                        <p>Help</p>
-                                        <span><a href="">Support</a></span>
-                                        <span><a href="">Cancel your bookings</a></span>
-                                        <span><a href="">Use Coupon</a></span>
-                                        <span><a href="">Refund Policies</a></span>
-                                        <span><a href="">International Travel Documents</a></span>
-                                    </div>
-                                </div>
-                            </footer>
-                            <div class="footer-bottom">
-                                <p>© My Dream Place 2022</p>
-                            </div>
+                        </footer>
+                        <div class="footer-bottom">
+                            <p>© My Dream Place 2022</p>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
+        <script type="module" src="js/app.js"></script>
     </body>
 </html>

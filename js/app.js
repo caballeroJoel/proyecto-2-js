@@ -1,4 +1,4 @@
-import { destinacionsDestacades, ofertes, hotelsPopulars, searchResultsData } from "./data.js";
+import { destinacionsDestacades, ofertes, hotelsPopulars, searchResultsData, productDetailData } from "./data.js";
 
 const cls = {
 
@@ -16,12 +16,20 @@ const cls = {
     filterPopularCant: document.querySelector("#filterPopularCant"),
 
     listResult: document.querySelector("#listResult"),
+
+
+    imgProducts: document.querySelector("#imgProducts"),
+    nameProd: document.querySelector("#nameProd"),
+    overviewProduct: document.querySelector("#overviewProduct"),
+    areaProduct: document.querySelector("#areaProduct"),
+    roomsAva: document.querySelector("#roomsAva"),
     
 }
 
 function render() {
 
     const ruta = window.location.pathname;
+    // console.log(ruta);
 
     if(ruta == "/home.html") {
         vacacionesDestacadas();
@@ -31,6 +39,9 @@ function render() {
     if(ruta == "/listado.html") {
         searchFilters();
         searchResult();
+    }
+    if(ruta == "/product.html") {
+        productDetail();
     }
 
 }
@@ -143,7 +154,6 @@ function searchFilters() {
     html1="";
 
 }
-
 function searchResult() {
 
     let html="";
@@ -199,6 +209,170 @@ function searchResult() {
     listResult.innerHTML = html;
 
 }
+
+/****************** Search ******************/
+function productDetail() {
+    let htmlImg = '', htmlName='', hmtlOverview='', htmlFacilities = '';
+    let htmlArea = '', htmlRooms = '';
+
+    htmlImg += `
+        <div>
+            <div>
+                <img src="./img/products/${productDetailData.hotel.id}_1.png" alt="">
+                </div>
+                
+                <div>
+                <div>
+                    <img src="./img/products/${productDetailData.hotel.id}_2.png" alt="">
+                </div>
+                
+                <div>
+                    <img src="./img/products/${productDetailData.hotel.id}_3.png" alt="">
+                </div>
+            </div>
+        </div>
+    `;
+    cls.imgProducts.innerHTML = htmlImg;
+
+
+    htmlName = `
+        <h1>${productDetailData.hotel.name}</h1>
+        <div class="stars-rating">
+            <div>
+                <img src="./img/star.png" alt="">
+                <img src="./img/star.png" alt="">
+                <img src="./img/star.png" alt="">
+                <img src="./img/star.png" alt="">
+                <img src="./img/star.png" alt="">
+            </div>
+            <p>${productDetailData.hotel.rating} (${productDetailData.hotel.reviewsCount} Reviews)</p>
+        </div>
+        <div class="loc">
+            <img src="./img/ubicaciones.png" alt="">
+            <p>${productDetailData.hotel.address}</p>
+        </div>
+    `;
+    cls.nameProd.innerHTML = htmlName;
+
+    productDetailData.topFacilities.forEach(fac => {
+        htmlFacilities += `
+            <div>
+                <img src="./img/icons_prod/${fac.id}.png" alt="">
+                <span>${fac.label}</span>
+            </div>
+        `;
+    });
+
+    hmtlOverview = `
+        <p>Overview</p>
+        <div class="overview-span">
+            <span>${productDetailData.hotel.overviewText}</span>
+        </div>
+        <hr>
+        <p>Top facilities</p>
+        <div class="facitities">
+            ${htmlFacilities}
+        </div>
+    `;
+    cls.overviewProduct.innerHTML = hmtlOverview;
+
+    let html="";
+    productDetailData.exploreArea.forEach(area => {
+        html += `
+            <div>
+                <div>
+                    <img src="./img/icons_prod/plane.png" alt="">
+                    <span>${area.name}</span>
+                </div>
+                <div>
+                    <span>${area.distance}</span>
+                </div>
+            </div>
+        `;
+    });
+
+    htmlArea = `
+        <img src="./img/products/map-${productDetailData.hotel.id}.png" alt="">
+        <div>
+            <p>Explore the area</p>
+
+            <div class="explore">
+                ${html}
+            </div>
+        </div>
+    `;
+    cls.areaProduct.innerHTML = htmlArea;
+
+    html='';
+
+    productDetailData.rooms.forEach(room => {
+        html += `
+            <div class="dorm">
+                <img src="./img/products/${room.id}.png" alt="">
+                <div>
+                    <h3>${room.name}</h3>
+                    <div>
+                        <div>
+                            <img src="./img/icons_prod/security_gr.png" alt="">
+                            <span>${room.price} ${room.currency}</span>
+                        </div>
+                        <div>
+                            <img src="./img/icons_prod/pool_gr.png" alt="">
+                            <span>Sleeps ${room.sleeps}</span>
+                        </div>
+                        <div>
+                            <img src="./img/icons_prod/top_gr.png" alt="">
+                            <span>${room.beds}</span>
+                        </div>
+                    </div>
+                    <button>Reserve suite</button>
+                </div>
+            </div>
+        `;
+    });
+
+    htmlRooms = `
+        <h2>Available rooms</h2>
+            <div class="reserva">
+                <div>
+                    <input type="text" placeholder="${productDetailData.availability.checkin}">
+                    <img src="./img/calendario.png" alt="">
+                </div>
+                <div>
+                    <input type="text" placeholder="${productDetailData.availability.checkout}">
+                    <img src="./img/calendario.png" alt="">
+                </div>
+                <div>
+                    <input type="text" placeholder="${productDetailData.availability.guests}">
+                    <img src="./img/avatar.png" alt="">
+                </div>
+                <div>
+                    <button>Check Availability</button>
+                </div>
+            </div>
+
+            <div class="results">
+                <div class="discount">
+                    <div>
+                        <div>
+                            <img src="./img/avion_wh.png" alt="">
+                            <span>my Dream Place</span>
+                        </div>
+                        <p>${productDetailData.promoCard.title}</p>
+                    </div>
+                    <div>
+                        <img class="person" src="./img/products/person.png" alt="">
+                    </div>
+                </div>
+                ${html}
+            </div>
+    `;
+
+    cls.roomsAva.innerHTML = htmlRooms;
+
+}
+
+
 
 
 
