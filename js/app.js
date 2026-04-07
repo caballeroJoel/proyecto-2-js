@@ -1,4 +1,4 @@
-import { destinacionsDestacades, ofertes, hotelsPopulars, searchResultsData, productDetailData, checkoutData } from "./data.js";
+import { destinacionsDestacades, ofertes, hotelsPopulars, searchResultsData, productDetailData, checkoutData, myTripsData } from "./data.js";
 
 const cls = {
 
@@ -28,6 +28,9 @@ const cls = {
     resumenReser: document.querySelector("#resumenReser"),
     infoImportant: document.querySelector("#infoImportant"),
     
+    myTrips: document.querySelector("#myTrips"),
+    sugTripsHist: document.querySelector("#sugTripsHist"),
+    
 }
 
 function render() {
@@ -54,6 +57,10 @@ function render() {
         room();
         reservation();
         importantInfo();
+    }
+    if(ruta == "/my_trips.html") {
+        myTrips();
+        sugTrips();
     }
 
 }
@@ -497,6 +504,72 @@ function importantInfo() {
     `;
 
     cls.infoImportant.innerHTML = html;
+}
+
+/****************** My Trips *****************/
+function myTrips() {
+    let html = '<h1>My trips</h1>';
+
+    myTripsData.trips.forEach(trip => {
+        html += `
+            <div class="trips" id="${trip.bookingId}">
+                <div class="img">
+                    <img src="./img/products/${trip.hotelId}_2.png" alt="">
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <h2>${trip.hotelName}</h2>
+                            <div class="stars-rating">
+                                <div>
+                                    <img src="./img/star.png" alt="">
+                                    <img src="./img/star.png" alt="">
+                                    <img src="./img/star.png" alt="">
+                                    <img src="./img/star.png" alt="">
+                                    <img src="./img/star.png" alt="">
+                                </div>
+                                <p>${trip.rating} (${trip.reviewsCount} Reviews)</p>
+                            </div>
+                        </div>
+                        <div class="prop">
+                            <span>${trip.policy}</span>
+                            <p>Check in: ${trip.checkIn}</p>
+                            <p>Check out: ${trip.checkOut}</p>
+                            <p>${trip.nights} night stay</p>
+                        </div>
+
+                    </div>
+                    <div class="price">
+                        <p>${trip.rooms} room 2 days</p>
+                        <div class="doll">
+                            <p class="red">${trip.currency}${trip.oldPrice}</p>
+                            <p>${trip.currency}${trip.price}</p>
+                        </div>
+                        <p>Includes taxes and fees</p>
+                        <button>View trip details</button>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    cls.myTrips.innerHTML = html;
+}
+
+function sugTrips() {
+    let html = "";
+
+    myTripsData.suggestedDestinations.forEach(trip => {
+        html += `
+            <div class="hotel-item" id="${trip.id}">
+                <img src="./img/cont/${trip.imatgeUrl}" alt="">
+                <p>${trip.nom}</p>
+                <span>${trip.propietatsCount} properties</span>
+            </div>
+        `;
+    })
+
+    cls.sugTripsHist.innerHTML = html;
 }
 
 render();

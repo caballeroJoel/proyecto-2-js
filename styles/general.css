@@ -2271,6 +2271,7 @@ body {
 
                 .my_trips {
                     width: 1030px;
+                    min-height: 700px;
 
                     h1 {
                         padding: 18px 0px;
@@ -2279,8 +2280,7 @@ body {
                     .trips {
                         width: 1030px;
                         padding: 20px;
-
-                        margin-bottom: 400px;
+                        margin-bottom: 30px;
 
                         display: flex;
 
@@ -2293,9 +2293,11 @@ body {
                             height: 200px;
                             margin-right: 20px;
 
-                            background-image: url(./../img/products/entrada_casa.png);
-                            background-size: cover;
-                            background-position: center;
+                            img {
+                                width: 285px;
+                                height: 200px;
+                                border-radius: 5px;
+                            }
 
                             border-radius: 5px;
                         }
