@@ -590,8 +590,22 @@ async function importantInfo() {
 }
 
 /****************** My Trips *****************/
-function myTrips() {
+async function myTrips() {
     let html = '<h1>My trips</h1>';
+
+    let { data, error } = await client
+        .from("my_trips_data")
+        .select("data")
+        .single();
+
+    if (error) {
+        console.error(error);
+        return;
+    }
+
+    const myTripsData = data.data;
+
+    console.log(myTripsData);
 
     myTripsData.trips.forEach(trip => {
         html += `
@@ -639,8 +653,20 @@ function myTrips() {
     cls.myTrips.innerHTML = html;
 }
 
-function sugTrips() {
+async function sugTrips() {
     let html = "";
+
+    let { data, error } = await client
+        .from("my_trips_data")
+        .select("*")
+        .single();
+
+    if (error) {
+        console.error(error);
+        return;
+    }
+
+    const myTripsData = data.data;
 
     myTripsData.suggestedDestinations.forEach(trip => {
         html += `
